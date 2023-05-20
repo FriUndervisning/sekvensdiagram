@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant Sensor
     participant PLC
