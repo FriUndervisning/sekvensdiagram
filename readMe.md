@@ -1,9 +1,8 @@
 ```mermaid
 sequenceDiagram
-    participant Sensor
+    participant User
     participant PLC
-    participant Motor
 
-    Sensor->>PLC: Indgangssignal detekteret
-    PLC->>Motor: Aktiver motor
-    PLC->>Sensor: Kontroller motorstatus
+    User->>PLC: Tryk på S1
+    Note right of PLC: Tilstand 1
+    PLC->>PLC: Aktiver Q1
