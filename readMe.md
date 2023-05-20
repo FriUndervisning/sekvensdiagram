@@ -1,7 +1,7 @@
 ```mermaid
 stateDiagram-v2
-    Tilstand1: Indgående besked
-    Tilstand1: Udgående besked
+    Tilstand1: M1 := 0 
+    Tilstand1: Grøn lampe blink := 0
     [*] --> Tilstand1
     Tilstand1 --> Tilstand2 : S1
     Tilstand2: Indgående besked
