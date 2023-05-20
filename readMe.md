@@ -1,10 +1,10 @@
 ```mermaid
 stateDiagram-v2
     Tilstand1: Tilstand 1
-    Tilstand1: M1 := 0 
-    Tilstand1: Grøn lampe blink := 0
-    Tilstand1: Grøn lampe konstant := 0 
-    Tilstand1: Drift produktion := 0
+    Tilstand1: M1 := 0 , linje 1
+    Tilstand1: Grøn lampe blink := 0, linje 2
+    Tilstand1: Grøn lampe konstant := 0 , linje 3
+    Tilstand1: Drift produktion := 0, linje 4
     [*] --> Tilstand1
     Tilstand1 --> Tilstand2 : S1
     Tilstand2: Tilstand 2
