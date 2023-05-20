@@ -1,6 +1,6 @@
 ```mermaid
 stateDiagram-v2
-    Tilstand1: Indgående besked
+    Tilstand1: Tilstand 1
     Tilstand1: Udgående besked, linje 1
     Tilstand1: Udgående besked, linje 2
     [*] --> Tilstand1
