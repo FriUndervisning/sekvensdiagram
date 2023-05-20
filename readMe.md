@@ -1,35 +1,20 @@
 ```mermaid
 sequenceDiagram
     participant User
-    participant System
+    participant PLC
 
-    User->>System: Send anmodning
+    User->>PLC: Tryk på S1
+    Note right of PLC: Tilstand 1
+    PLC->>PLC: Skift til Tilstand 2
 
-    alt Anmodning godkendt
-        System->>System: Valider anmodning
-        System->>System: Behandle anmodning
-        System->>User: Send svar
-    else Anmodning afvist
-        System->>User: Send afvisningssvar
-    end
+    User->>PLC: Tryk på S2
+    Note right of PLC: Tilstand 2
+    PLC->>PLC: Skift til Tilstand 3
 
-    loop Gentagne handlinger
-        System->>System: Udfør handling
-    end
+    User->>PLC: Tryk på S3
+    Note right of PLC: Tilstand 3
+    PLC->>PLC: Skift til Tilstand 4
 
-    opt Optimeret handling
-        System->>System: Udfør hurtig handling
-    end
-
-    par Fragmenteret handling
-    par A
-        User->>System: Send anmodning A
-        System->>User: Send svar A
-    end
-    par B
-        User->>System: Send anmodning B
-        System->>User: Send svar B
-    end
-    end
-
-    User->>System: Afslut anmodning
+    User->>PLC: Tryk på S4
+    Note right of PLC: Tilstand 4
+    PLC->>PLC: Skift til Tilstand 1
