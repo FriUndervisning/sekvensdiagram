@@ -1,17 +1,17 @@
 ```mermaid
 stateDiagram-v2
     Tilstand1: Tilstand 1
-    Tilstand1: Tænd M1<br>Her
+    Tilstand1: M1 := 0 <br>Grøn lampe blink := 0<br>Grøn lampe konstant := 0 <br>Drift produktion := 0
     [*] --> Tilstand1
     Tilstand1 --> Tilstand2 : S1
-    Tilstand2: Indgående besked
-    Tilstand2: Udgående besked
+    Tilstand2: Tilstand 2
+    Tilstand2: M1 := 1 <br>Grøn lampe blink := 1
     Tilstand2 --> Tilstand3 : S2
     Tilstand3: Tilstand 3
-    Tilstand3: Sluk M1
+    Tilstand3: Grøn lampe blink := 0<br>Grøn lampe konstant := 1
     Tilstand3 --> Tilstand4 : B3
-    Tilstand4: Indgående besked
-    Tilstand4: Udgående besked
+    Tilstand4: Tilstand 4
+    Tilstand4: Drift produktion := 1
     Tilstand4 --> Tilstand1 : S3
 
 
