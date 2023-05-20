@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     Participant User
     Participant System
