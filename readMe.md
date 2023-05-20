@@ -1,4 +1,8 @@
-```mermaid
 sequenceDiagram
-    Alice->>Bob: Hej Bob, hvordan har du det?
-    Bob-->>Alice: Hej Alice! Jeg har det godt, tak!
+    participant Sensor
+    participant PLC
+    participant Motor
+
+    Sensor->>PLC: Indgangssignal detekteret
+    PLC->>Motor: Aktiver motor
+    PLC->>Sensor: Kontroller motorstatus
